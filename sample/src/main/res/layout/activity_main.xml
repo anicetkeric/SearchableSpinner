@@ -17,4 +17,15 @@
         android:layout_height="wrap_content"
         android:entries="@array/planets"
         app:hintText="SEKECCTTT"/>
+    
+    
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/spinner_pl"
+        android:layout_below="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/spinner_style"
+        app:hintText="Select planets"/>
+    
+    
 </RelativeLayout>
