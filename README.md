@@ -7,6 +7,9 @@ Searchable Spinner is a dialog spinner with the search feature which allows to s
 
 ![Alt text](https://github.com/miteshpithadiya/SearchableSpinner/blob/master/searchablespinnerlibrary/src/main/res/nobleltevzwLMY47XMeditab02192016201518.gif "Searchable Spinner")
 
+![Alt text](https://github.com/anicetkeric/SearchableSpinner/blob/master/sample/src/main/res/drawable/Screenshot%5B2%5D.png "Searchable Spinner")
+
+
 # Gradle
     dependencies {
         ...
@@ -17,9 +20,41 @@ Searchable Spinner is a dialog spinner with the search feature which allows to s
     <com.toptoche.searchablespinnerlibrary.SearchableSpinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+            
+            
+             <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/spinner_pl"
+        android:layout_below="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/spinner_style"
+        app:hintText="Select planets"/>
 
     searchableSpinner.setTitle("Select Item");
     searchableSpinner.setPositiveButton("OK");
+    
+    
+    
+    spPlanets = (Spinner) findViewById(R.id.spinner_pl);
+
+
+        ArrayList<String> planets = new ArrayList<String>();
+        planets.add("Mercury");
+        planets.add("Venus");
+        planets.add("Earth");
+        planets.add("Mars");
+        planets.add("Jupiter");
+        planets.add("Saturn");
+        planets.add("Uranus");
+        planets.add("Neptune");
+        planets.add("Pluto");
+
+
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, planets);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        spPlanets.setAdapter(adapter);
+    
     
 # Changelog
  * <b>1.3.1</b>
